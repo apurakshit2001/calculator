@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: url(./images/bkg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 300px;
+    height: 500px;
+    box-shadow: 3px 3px red, -1em 0 .4em rgba(0, 0, 0, 0.74);
+    border-radius: 15px;
+    /* background: #222520; */
+    background: transparent;
+    overflow: hidden;
+}
+
+form input {
+    width: 97%;
+    height: 150px;
+    border: 2px solid silver;
+    border-radius: 15px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0.3rem;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    /* background: rgb(189, 186, 186); */
+    background: black;
+    opacity: 0.7;
+    /* background: transparent; */
+    pointer-events: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    row-gap: 10px;
+}
+
+button {
+    width: 60px;
+    height: 52px;
+    border-radius: 100px;
+
+}
+
+.buttonYellow {
+    background: whitesmoke;
+    opacity: 0.7;
+    font-size: 20px;
+}
+
+.buttonGray {
+    background: black;
+    opacity: 0.5;
+    color: white;
+    font-size: 20px;
+}
+
+.buttonGrayEnter {
+    grid-column: 4 / 5;
+    grid-row: 2 / span 4;
+    height: 250px;
+    background: rgba(236, 3, 3, 0.288);
+    /* opacity: 0.4; */
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 700;
+}
