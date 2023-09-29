@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Easy Calculator</title>
@@ -12,30 +13,38 @@
 <body>
     <section class="calculator">
         <form action="">
-            <input type="text" name="" class="screen" id="veiwPort">
+            <input type="text" name="" class="screen" id="viewport">
         </form>
 
         <div class="buttons">
-            <button type="button" class="button buttonYellow" data-num="*">*</button>
-            <button type="button" class="button buttonYellow" data-num="/">/</button>
-            <button type="button" class="button buttonYellow" data-num="-">-</button>
-            <button type="button" class="button buttonYellow" data-num="+">+</button>
+            <button type="button" class="button buttonYellow" id="multiply" onclick="handleButtonClick(this)">*</button>
+            <button type="button" class="button buttonYellow" id="divide" onclick="handleButtonClick(this)">/</button>
+            <button type="button" class="button buttonYellow" id="subtract" onclick="handleButtonClick(this)">-</button>
+            <button type="button" class="button buttonYellow" id="add" onclick="handleButtonClick(this)">+</button>
 
-            
-            <button type="button" class="button buttonGray" data-num="9">9</button>
-            <button type="button" class="button buttonGray" data-num="8">8</button>
-            <button type="button" class="button buttonGray" data-num="7">7</button>
-            <button type="button" class="button buttonGray" data-num="6">6</button>
-            <button type="button" class="button buttonGray" data-num="5">5</button>
-            <button type="button" class="button buttonGray" data-num="4">4</button>
-            <button type="button" class="button buttonGray" data-num="3">3</button>
-            <button type="button" class="button buttonGray" data-num="2">2</button>
-            <button type="button" class="button buttonGray" data-num="1">1</button>
-            <button type="button" class="button buttonGray" data-num="0">0</button>
-            <button type="button" class="button buttonGray" data-num=".">.</button>
-            <button type="button" class="button buttonGrayClear">AC</button>
+            <button type="button" class="button buttonGray" id="num9" onclick="handleButtonClick(this)">9</button>
+            <button type="button" class="button buttonGray" id="num8" onclick="handleButtonClick(this)">8</button>
+            <button type="button" class="button buttonGray" id="num7" onclick="handleButtonClick(this)">7</button>
+            <button type="button" class="button buttonGray" id="num6" onclick="handleButtonClick(this)">6</button>
+            <button type="button" class="button buttonGray" id="num5" onclick="handleButtonClick(this)">5</button>
+            <button type="button" class="button buttonGray" id="num4" onclick="handleButtonClick(this)">4</button>
+            <button type="button" class="button buttonGray" id="num3" onclick="handleButtonClick(this)">3</button>
+            <button type="button" class="button buttonGray" id="num2" onclick="handleButtonClick(this)">2</button>
+            <button type="button" class="button buttonGray" id="num1" onclick="handleButtonClick(this)">1</button>
+            <button type="button" class="button buttonGray" id="num0" onclick="handleButtonClick(this)">0</button>
+            <button type="button" class="button buttonGray" id="decimal" onclick="handleButtonClick(this)">.</button>
+            <button type="button" class="button buttonGrayClear" id="clear" onclick="clearDisplay()">AC</button>
 
-            <button type="button" class="button buttonGrayEnter">=</button>
+
+            <button type="button" class="button buttonGrayClear" id="root" onclick="rootfunction()">√</button>
+            <button type="button" class="button buttonGrayClear" id="percentage"
+                onclick="calculatePercentage()">%</button>
+
+            <button type="button" class="button buttonGrayClear" id="clear" onclick="removeLastCharacter()">⬅</button>
+            <button type="button" class=" link"><a href="https://github.com/apurakshit2001" target="_blank"><i
+                        class="fa fa-github"></i></a></button>
+                        
+            <button type="button" class="button buttonGrayEnter" id="calculate" onclick="calculateResult()">=</button>
         </div>
     </section>
 </body>

@@ -1,26 +1,64 @@
-(function () {
-    let screen = document.getElementById("veiwPort");
-    let buttons = document.querySelectorAll(".button");
-    let clear = document.querySelector(".buttonGrayClear");
-    let equal = document.querySelector(".buttonGrayEnter");
+function handleButtonClick(button) {
+    const buttonValue = button.textContent;
+    const viewport = document.getElementById("viewport");
+    viewport.value += buttonValue;
+}
 
-    buttons.forEach(function (button) {
-        button.addEventListener('click', function (e) {
-            let value = e.target.dataset.num;
-            screen.value += value;
-        })
-    });
+function clearDisplay(){
+    let display = document.getElementById('viewport');
+    display.value = '';
+}
 
-    equal.addEventListener('click', function (e) {
-        if (screen.value === "") {
-            screen.value = "";
+function removeLastCharacter(){
+    let display = document.getElementById('viewport');
+    display.value = display.value.slice(0, -1);
+
+}
+
+
+function rootfunction() {
+    
+    let display = document.getElementById("viewport");
+    let buttonValue = "√"; 
+    display.value += buttonValue;
+}
+
+function calculateResult(){
+
+    let display = document.getElementById('viewport');
+    let expression = display.value;
+
+    // Check if the expression contains the square root symbol (√)
+    if (expression.includes('√')) {
+        // Extract the part after √ and calculate the square root
+        let parts = expression.split('√');
+        if (parts.length === 2) {
+            let radicand = parseFloat(parts[1]);
+            if (!isNaN(radicand)) {
+                let result = Math.sqrt(radicand);
+                display.value = result;
+            } else {
+                display.value = 'Error';
+            }
         } else {
-            let answer = eval(screen.value);
-            screen.value = answer;
+            display.value = 'Error';
         }
-    })
+    }
+    //The root ends here 
+   
+    
+    else {
+        
+        try {
+            display.value = eval(expression);
+        } catch (error) {
+            display.value = 'Error';
+        }
+    }
 
-    clear.addEventListener('click', function (e) {
-        screen.value = "";
-    })
-})();
+}
+
+
+function calculatePercentage(){
+
+}
