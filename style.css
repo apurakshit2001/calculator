@@ -105,3 +105,9 @@ button {
 .link .fa-github {
     font-size: 30px;
 }
+
+@media screen and (max-width: 450px){
+    .link{
+        background-color: red;
+    }
+}
