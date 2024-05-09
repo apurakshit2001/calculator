@@ -12,8 +12,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  position:relative;
 }
 
+.abc{
+  z-index: -1;
+  position: absolute;
+  bottom: 55px;
+}
 .calculator {
     width: 300px;
     height: 540px;

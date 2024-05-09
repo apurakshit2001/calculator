@@ -2,7 +2,11 @@ function handleButtonClick(button) {
     const buttonValue = button.textContent;
     const viewport = document.getElementById("viewport");
     viewport.value += buttonValue;
+    
+    
 }
+
+
 
 function clearDisplay(){
     let display = document.getElementById('viewport');
@@ -62,3 +66,18 @@ function calculateResult(){
 function calculatePercentage(){
 
 }
+
+// Get the audio element
+        const audio = document.getElementById("clickSound");
+
+        // Get all buttons
+        const buttons = document.querySelectorAll("button");
+
+        // Add click event listener to each button
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Play the audio
+                audio.play();
+            });
+        });
+
